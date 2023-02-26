@@ -2,6 +2,7 @@
 ascending order by eliminating elements at each step
 Note: at each step remove element a[i] where a[i-1]> a[i]*/
 class Node{
+    /*node of singly linked list*/
     int data;
     Node next;
     Node head=null;
@@ -10,6 +11,7 @@ class Node{
         this.next = null;
     }
     public void addNode(int data){
+        /*add node to link list*/
         Node newNode = new Node(data);
         if (head==null){
             head=newNode;
@@ -27,6 +29,7 @@ class Node{
         int step=0;
         while (second!=null){
             if(first.data>second.data){
+                //switch required
                 first.next=second.next;
                 second.next=null;
                 second=first.next;
